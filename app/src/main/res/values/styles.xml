@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--标题栏隐藏-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--toolbar的一个切换-->
+        <item name="windowActionModeOverlay">true</item>
+        <!--<item name="actionModeStyle">@style/ActionMode</item>-->
+    </style>
+
+    <style name="MyAppTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="mypopumenu" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/whrite</item>
+        <item name="android:textColor">@color/blue2</item>
+    </style>
+
+    <style name="MyImageTheme">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:tint">@color/tinyting_new</item>-->
+        <item name="android:background">@color/skin1</item>
+    </style>
+</resources>

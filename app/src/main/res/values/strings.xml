@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndrolLDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_button">ButtonActivity</string>
+    <string name="title_activity_animator">AnimatorActivity</string>
+    <string name="title_activity_transition">TransitionActivity</string>
+    <string name="title_activity_explode">ExplodeActivity</string>
+    <string name="title_activity_slide">SlideActivity</string>
+    <string name="title_activity_fade">FadeActivity</string>
+    <string name="title_activity_share_elements">ShareElementsActivity</string>
+    <string name="title_activity_my_tool_bar">MyToolBarActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_drawable_titing">DrawableTitingActivity</string>
+</resources>

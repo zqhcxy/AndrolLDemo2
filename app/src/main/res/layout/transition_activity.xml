@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.zqh_pc.androlldemo.TransitionActivity">
+
+    <Button
+        android:id="@+id/transition_explode"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="EXPLODE 展开效果"
+        android:textColor="@color/blue2" />
+
+    <Button
+        android:id="@+id/transition_slide"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/transition_explode"
+        android:text="slide 展开效果"
+        android:textColor="@color/blue2" />
+
+    <Button
+        android:id="@+id/transition_fade"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/transition_slide"
+        android:text="fade 展开效果"
+        android:textColor="@color/blue2" />
+
+    <Button
+        android:id="@+id/transition_shared_elements"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/transition_fade"
+        android:text="Shared Elements 展开效果"
+        android:textColor="@color/blue2" />
+
+    <ImageView
+        android:id="@+id/transition_iv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transition_shared_elements"
+        android:src="@mipmap/picture2"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--@style/Theme.AppCompat.Light-->
+
+    <!--@android:style/Theme.Material.Light"-->
+    <!--可使用toollbar版-->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- 标题栏背景颜色 -->
+        <item name="android:colorPrimary">?attr/colorAccent</item>
+        <!--    状态栏背景颜色 -->
+        <item name="android:colorPrimaryDark">?attr/colorAccent</item>
+        <!--   checkbox选中颜色 -->
+        <item name="android:colorAccent">@color/blue2</item>
+        <!--默认字体颜色-->
+        <item name="android:textColorPrimary">@color/whrite</item>
+        <!--底部菜单按钮布局背景颜色-->
+        <item name="android:navigationBarColor">@color/gray4_bg</item>
+
+        <!--标题栏隐藏-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--允许界面变化动画-->
+        <item name="android:windowContentTransitions">true</item>
+        <!-- 指定进入和退出transitions  全局的-->
+        <!--<item name="android:windowEnterTransition">@transition/mytranstion</item>-->
+        <!--<item name="android:windowExitTransition">@transition/mytranstion</item>-->
+
+    </style>
+
+    <!--5.0 新主题  深色版即黑色-->
+    <style name="MyAppTheme" parent="android:Theme.Material">
+        <!-- Customize your theme here. -->
+    </style>
+    <!--5.0 新主题  浅色版-->
+    <style name="MyAppTheme1" parent="@android:style/Theme.Material.Light">
+        <!-- 标题栏背景颜色 -->
+        <item name="android:colorPrimary">@color/blue2</item>
+        <!--    状态栏背景颜色 -->
+        <item name="android:colorPrimaryDark">@color/blue2</item>
+        <!--   checkbox选中颜色 -->
+        <item name="android:colorAccent">@color/blue2</item>
+        <!--默认字体颜色-->
+        <item name="android:textColorPrimary">@color/whrite</item>
+        <!--底部菜单按钮布局背景颜色-->
+        <item name="android:navigationBarColor">@color/gray4_bg</item>
+
+        <!--标题栏隐藏-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--允许界面变化动画-->
+        <item name="android:windowContentTransitions">true</item>
+        <!-- 指定进入和退出transitions  全局的-->
+        <!--<item name="android:windowEnterTransition">@transition/mytranstion</item>-->
+        <!--<item name="android:windowExitTransition">@transition/mytranstion</item>-->
+    </style>
+
+    <style name="MyImageTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:tint">@color/tinyting_new</item>
+    </style>
+</resources>

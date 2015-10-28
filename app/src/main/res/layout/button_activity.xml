@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2_bg"
+    android:padding="16dp"
+    tools:context="com.example.zqh_pc.androlldemo.ButtonActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:text="Button默认特效" />
+
+            <Button
+                android:id="@+id/bt2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/bt1"
+                android:layout_centerHorizontal="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Button默认：无边界" />
+
+            <Button
+                android:id="@+id/bt3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/bt2"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_shadow"
+                android:text="Button自定义颜色" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/bt3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/info_background"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="TextView点击特效:代码实现点击悬浮"
+                android:textColor="#252525" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/tv1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tv_shadow"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="TextView自定义颜色"
+                android:textColor="#252525" />
+
+
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv2"
+                android:layout_margin="10dp"
+                android:checked="true"
+                android:text="只有在5.0的主题上才能设置颜色，而且自定义颜色还是整个App变化的。要想单个变化只能用图片" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/switch1"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/switch1"
+                android:layout_toRightOf="@+id/switch1" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/switch1"
+                android:layout_margin="10dp"
+                android:layout_marginTop="40dp"
+                card_view:cardCornerRadius="4dp"></android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/cardview1"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                card_view:cardCornerRadius="4dp"></android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/cardview2"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                card_view:cardCornerRadius="4dp"></android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

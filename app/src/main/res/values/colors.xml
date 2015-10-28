@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="whrite">#ffffff</color>
+    <color name="gray1_bg">#f2f2f2</color>
+    <color name="gray2_bg">#dfdfdf</color>
+    <color name="gray3_bg">#c8c8c8</color>
+    <color name="gray4_bg">#c0bfbf</color>
+    <color name="gray5_bg">#f2f0f0</color>
+    <color name="gray6_bg">#ededed</color>
+    <color name="msg_edit_stroke">#c1c1c3</color>
+
+    <color name="blue1">#0968c9</color>
+    <color name="blue2">#0b94f9</color>
+
+    <color name="skin1">#a0674b</color>
+    <color name="skin2">#f596aa</color>
+    <color name="skin3">#77428d</color>
+    <color name="skin4">#90b44b</color>
+
+
+
+
+
+</resources>

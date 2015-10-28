@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2_bg"
+    tools:context="com.example.zqh_pc.androlldemo.Activity.DrawableTitingActivity">
+
+    <include layout="@layout/all_toolbar_ly" />
+
+
+    <TextView
+        android:id="@+id/tinting_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="16dp"
+        android:text="图片的着色：(点击右上角菜单进行着色)"
+        android:textColor="@color/blue2"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/tinting_iv1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tinting_tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/nav_return" />
+
+    <TextView
+        android:id="@+id/tinting_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tinting_iv1"
+        android:layout_marginTop="16dp"
+        android:text="图片的着色：Tinting的其他用法:xml文件"
+        android:textColor="@color/blue2"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/tinting_iv2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        style="@style/MyImageTheme"
+        android:layout_below="@+id/tinting_tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/nav_return" />
+
+
+</RelativeLayout>

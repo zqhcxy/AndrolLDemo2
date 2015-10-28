@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed state -->
+    <!--<item android:color="#ff0000" android:state_pressed="true" />-->
+    <!--&lt;!&ndash; Default &ndash;&gt;-->
+    <!--<item android:color="#4aff48" />-->
+
+
+    <item android:state_pressed="false">
+        <bitmap android:src="@mipmap/nav_return" ></bitmap>
+    </item>
+    <item android:state_pressed="true">
+        <!--<bitmap android:src="@mipmap/nav_return" android:tint="@color/skin3"></bitmap>-->
+        <bitmap android:src="@mipmap/nav_return" android:tint="@color/skin3"/>
+    </item>
+</selector>

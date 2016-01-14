@@ -37,8 +37,10 @@ public class DrawableTitingActivity extends AppCompatActivity {
             getWindow().setEnterTransition(new Explode());
             getWindow().setExitTransition(new Slide());
         }
+        setTheme(R.style.NewTheme2);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawable_titing_activity);
+
         initView();
     }
 
@@ -49,6 +51,7 @@ public class DrawableTitingActivity extends AppCompatActivity {
         if (my_toolbar != null) {
             setSupportActionBar(my_toolbar);
         }
+//        my_toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.blue1));
         my_toolbar.setTitle("Image着色");
         my_toolbar.setNavigationIcon(R.mipmap.nav_return);
         my_toolbar.setNavigationOnClickListener(new View.OnClickListener() {

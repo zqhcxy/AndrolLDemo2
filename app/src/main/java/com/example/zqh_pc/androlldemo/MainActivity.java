@@ -15,6 +15,7 @@ import android.view.View;
 
 import com.example.zqh_pc.androlldemo.Activity.DrawableTitingActivity;
 import com.example.zqh_pc.androlldemo.Activity.MyToolBarActivity;
+import com.example.zqh_pc.androlldemo.Activity.WidgetActivity;
 import com.example.zqh_pc.androlldemo.Adapter.MyAdapter;
 
 import java.util.ArrayList;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTooblbar() {
         my_toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+//        my_toolbar.sett
         if (my_toolbar != null) {
             setSupportActionBar(my_toolbar);
         }
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         lists.add("Activity transitions（Activity转换效果）");
         lists.add("Toolbar");
         lists.add("Drawable Tinting(着色)");
-        lists.add("第三方库控件");
+        lists.add("控件");
         MyAdapter myAdapter = new MyAdapter(lists);
         mRecyclerView.setAdapter(myAdapter);
 
@@ -95,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         intent = new Intent(MainActivity.this, DrawableTitingActivity.class);
+                        break;
+                    case 5:
+                        intent = new Intent(MainActivity.this, WidgetActivity.class);
                         break;
                 }
 

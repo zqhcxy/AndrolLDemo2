@@ -3,6 +3,7 @@ package com.example.zqh_pc.androlldemo.Activity;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
@@ -24,7 +25,9 @@ public class MyToolBarActivity extends AppCompatActivity {
             getWindow().setEnterTransition(new Fade());
             getWindow().setExitTransition(new Fade());
         }
+        setTheme(R.style.NewTheme1);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.my_tool_bar_activity);
         my_toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         if (my_toolbar != null) {
@@ -36,6 +39,7 @@ public class MyToolBarActivity extends AppCompatActivity {
     }
 
     private void initTitleBar() {
+        my_toolbar.setBackgroundColor(ContextCompat.getColor(this,R.color.skin3));
         // 标题与颜色
         my_toolbar.setTitle("自定义Toolabr的实现");
         my_toolbar.setTitleTextColor(Color.WHITE);
@@ -51,7 +55,7 @@ public class MyToolBarActivity extends AppCompatActivity {
             }
         });
         //logo图标(没有点击事件)
-        my_toolbar.setLogo(R.mipmap.ic_launcher);
+        my_toolbar.setLogo(R.mipmap.ic_head);
     }
 
     @Override

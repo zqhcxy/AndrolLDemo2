@@ -5,27 +5,34 @@
 
     <!--@android:style/Theme.Material.Light"-->
     <!--可使用toollbar版-->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- 标题栏背景颜色 -->
-        <item name="android:colorPrimary">?attr/colorAccent</item>
+        <item name="android:colorPrimary">@color/blue2</item>
+        <!--<item name="android:background">@android:color/transparent</item>-->
+        <!--<item name="android:colorPrimary">@color/blue2</item>-->
         <!--    状态栏背景颜色 -->
-        <item name="android:colorPrimaryDark">?attr/colorAccent</item>
+        <!--<item name="android:colorPrimaryDark">@color/blue2</item>-->
         <!--   checkbox选中颜色 -->
         <item name="android:colorAccent">@color/blue2</item>
         <!--默认字体颜色-->
         <item name="android:textColorPrimary">@color/whrite</item>
-        <!--底部菜单按钮布局背景颜色-->
-        <item name="android:navigationBarColor">@color/gray4_bg</item>
+        <!--默认提示Hint字体颜色-->
+        <item name="android:textColorHint">@color/gray4_bg</item>
+        <!--&lt;!&ndash;底部菜单按钮布局背景颜色&ndash;&gt;-->
+        <!--<item name="android:navigationBarColor">@color/skin3</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <item name="colorAccent">@color/skin3</item>
 
         <!--标题栏隐藏-->
-        <!--<item name="windowActionBar">false</item>-->
-        <!--<item name="android:windowNoTitle">true</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
         <!--允许界面变化动画-->
         <item name="android:windowContentTransitions">true</item>
         <!-- 指定进入和退出transitions  全局的-->
         <!--<item name="android:windowEnterTransition">@transition/mytranstion</item>-->
         <!--<item name="android:windowExitTransition">@transition/mytranstion</item>-->
-
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
     </style>
 
     <!--5.0 新主题  深色版即黑色-->
@@ -33,7 +40,7 @@
         <!-- Customize your theme here. -->
     </style>
     <!--5.0 新主题  浅色版-->
-    <style name="MyAppTheme1" parent="@android:style/Theme.Material.Light">
+    <style name="MyAppTheme1" parent="android:Theme.Material.Light">
         <!-- 标题栏背景颜色 -->
         <item name="android:colorPrimary">@color/blue2</item>
         <!--    状态栏背景颜色 -->
@@ -58,5 +65,35 @@
     <style name="MyImageTheme" parent="AppTheme">
         <!-- Customize your theme here. -->
         <item name="android:tint">@color/tinyting_new</item>
+    </style>
+
+    <style name="NewTheme1" parent="AppTheme">
+        <!-- 标题栏背景颜色 -->
+        <item name="android:colorPrimary">@color/skin3</item>
+        <!--    状态栏背景颜色 -->
+        <item name="android:colorPrimaryDark">@color/skin3</item>
+        <!--   checkbox选中颜色 -->
+        <item name="android:colorAccent">@color/skin3</item>
+        <!--<item name="android:background">@mipmap/picture3</item>-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+    </style>
+    <style name="NewTheme2" parent="MyAppTheme1">
+        <!-- 标题栏背景颜色 -->
+        <item name="android:colorPrimary">@color/skin4</item>
+        <!--    状态栏背景颜色 -->
+        <item name="android:colorPrimaryDark">@color/skin4</item>
+        <!--   checkbox选中颜色 -->
+        <item name="android:colorAccent">@color/skin4</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <style name="mysytpe1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Status Bar -->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--&lt;!&ndash; Navigation Bar &ndash;&gt;-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
     </style>
 </resources>

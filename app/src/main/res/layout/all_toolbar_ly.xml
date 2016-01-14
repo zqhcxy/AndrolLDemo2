@@ -5,7 +5,9 @@
     android:id="@+id/my_toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/colorAccent"
+    android:background="@color/blue2"
     android:elevation="3dp"
     app:title="标题"
-    app:popupTheme="@style/mypopumenu" />
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    />
+    <!--android:background="?attr/colorAccent"-->

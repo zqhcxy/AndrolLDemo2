@@ -2,14 +2,18 @@ package com.example.zqh_pc.androlldemo.frament;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.zqh_pc.androlldemo.Activity.WidgetActivity;
 import com.example.zqh_pc.androlldemo.R;
 
 import java.util.ArrayList;
@@ -19,8 +23,14 @@ import java.util.List;
  * Created by zqh-pc on 2016/1/13.
  */
 public class TabFragment2 extends Fragment {
+
+    private static final String TAG="zqh";
     private View view;
     private RecyclerView my_recyclerly;
+
+    CoordinatorLayout mycoordinatorly;
+    AppBarLayout appBarLayout;
+int[] consumed = new int[2];
 
     @Nullable
     @Override
@@ -46,8 +56,32 @@ public class TabFragment2 extends Fragment {
         for (int i = 0; i < 20; i++) {
             strings.add("世界上最遥远的距离，是我站在你面前你却不知道我爱你。");
         }
-        ReayclerViewAdapter reayclerViewAdapter=new ReayclerViewAdapter(strings);
+        ReayclerViewAdapter reayclerViewAdapter = new ReayclerViewAdapter(strings);
         my_recyclerly.setAdapter(reayclerViewAdapter);
+//        mycoordinatorly = ((WidgetActivity) getActivity()).getMycoordinatorly();
+        appBarLayout = ((WidgetActivity) getActivity()).getAppBarLayout();
+        my_recyclerly.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        appBarLayout.getLocationOnScreen(consumed);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        int[] consumed1 = new int[2];
+                        appBarLayout.getLocationOnScreen(consumed1);
+                      if(consumed[1]>consumed1[1]){//下
+                          appBarLayout.setExpanded(false);
+                      }else if(consumed[1]<consumed1[1]){// 上
+                          appBarLayout.setExpanded(true);
+                      }
+                        break;
+                }
+
+                return false;
+            }
+        });
 
     }
 
@@ -84,8 +118,13 @@ public class TabFragment2 extends Fragment {
 
             public ViewHolder(View itemView) {
                 super(itemView);
-                textView=(TextView)itemView;
+                textView = (TextView) itemView;
             }
         }
+    }
+
+
+    public RecyclerView getrcview() {
+        return my_recyclerly;
     }
 }

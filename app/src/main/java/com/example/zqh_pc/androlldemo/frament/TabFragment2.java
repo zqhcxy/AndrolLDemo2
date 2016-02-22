@@ -68,14 +68,25 @@ int[] consumed = new int[2];
                     case MotionEvent.ACTION_DOWN:
                         appBarLayout.getLocationOnScreen(consumed);
                         break;
+//                    case MotionEvent.ACTION_MOVE:
+//                        int[] consumed2 = new int[2];
+//                        appBarLayout.getLocationOnScreen(consumed2);
+//                        if (consumed[1] > consumed2[1]) {//上
+//                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.INVISIBLE);
+//                        } else if (consumed[1] < consumed2[1]) {// 下
+//                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.VISIBLE);
+//                        }
+//                        break;
                     case MotionEvent.ACTION_UP:
                         int[] consumed1 = new int[2];
                         appBarLayout.getLocationOnScreen(consumed1);
-                      if(consumed[1]>consumed1[1]){//下
-                          appBarLayout.setExpanded(false);
-                      }else if(consumed[1]<consumed1[1]){// 上
-                          appBarLayout.setExpanded(true);
-                      }
+                        if (consumed[1] >= consumed1[1]) {//上
+                            appBarLayout.setExpanded(false);
+                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.INVISIBLE);
+                        } else if (consumed[1] <= consumed1[1]) {// 下
+                            appBarLayout.setExpanded(true);
+                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.VISIBLE);
+                        }
                         break;
                 }
 

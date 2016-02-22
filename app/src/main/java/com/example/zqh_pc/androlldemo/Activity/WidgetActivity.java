@@ -35,7 +35,7 @@ public class WidgetActivity extends FragmentActivity implements View.OnClickList
     private FloatingActionButton mFloatingActionButton;//浮动按钮
     private TabLayout mTabLayout;
     private ViewPager mviewpager;
-    private Toolbar mToolbar;
+    public Toolbar mToolbar;
 //    public CoordinatorLayout.Behavior behavior;
 
     CoordinatorLayout mycoordinatorly;
@@ -99,8 +99,6 @@ public class WidgetActivity extends FragmentActivity implements View.OnClickList
         CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams) appBarLayout.getLayoutParams();
          behavior = (AppBarLayout.Behavior) params.getBehavior();
 //        recyclerView=tabFragment2.getView();
-
-
     }
 
     public CoordinatorLayout getMycoordinatorly(){

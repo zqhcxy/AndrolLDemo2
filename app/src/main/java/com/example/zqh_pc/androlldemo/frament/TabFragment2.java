@@ -24,13 +24,13 @@ import java.util.List;
  */
 public class TabFragment2 extends Fragment {
 
-    private static final String TAG="zqh";
+    private static final String TAG = "zqh";
     private View view;
     private RecyclerView my_recyclerly;
 
     CoordinatorLayout mycoordinatorly;
     AppBarLayout appBarLayout;
-int[] consumed = new int[2];
+    int[] consumed = new int[2];
 
     @Nullable
     @Override
@@ -79,13 +79,17 @@ int[] consumed = new int[2];
 //                        break;
                     case MotionEvent.ACTION_UP:
                         int[] consumed1 = new int[2];
+                        int f_y;
+                        int c_y;
                         appBarLayout.getLocationOnScreen(consumed1);
-                        if (consumed[1] >= consumed1[1]) {//上
-                            appBarLayout.setExpanded(false);
-                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.INVISIBLE);
-                        } else if (consumed[1] <= consumed1[1]) {// 下
+                        f_y=Math.abs(consumed[1]);
+                        c_y=Math.abs(consumed1[1]);
+                        if (f_y > c_y) {//上
                             appBarLayout.setExpanded(true);
                             ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.VISIBLE);
+                        } else if (f_y < c_y) {// 下
+                            appBarLayout.setExpanded(false);
+                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.INVISIBLE);
                         }
                         break;
                 }
@@ -108,15 +112,15 @@ int[] consumed = new int[2];
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            TextView textView = new TextView(getActivity());
-            parent.addView(textView);
-            ViewHolder viewHolder = new ViewHolder(textView);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_item_layout, parent, false);
+            parent.addView(view);
+            ViewHolder viewHolder = new ViewHolder(view);
             return viewHolder;
         }
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            holder.textView.setText(strings.get(position));
+//            holder.textView.setText(strings.get(position));
         }
 
         @Override
@@ -129,7 +133,7 @@ int[] consumed = new int[2];
 
             public ViewHolder(View itemView) {
                 super(itemView);
-                textView = (TextView) itemView;
+                textView = (TextView) itemView.findViewById(R.id.item_tv1);
             }
         }
     }

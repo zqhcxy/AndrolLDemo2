@@ -10,4 +10,5 @@ Android L 的学习整理。
 共分为`六个部分`分别是：
 * Buttom按钮阴影与波纹
 
-    多行        文本        测试
+
+[我的博客](http://my.csdn.net/my/mycsdn)

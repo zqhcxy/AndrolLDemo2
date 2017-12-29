@@ -11,5 +11,6 @@ Android L 的学习整理。
 * Buttom按钮阴影与波纹
 * Reveal effect(揭露效果)
 * Activity transitions(Activity转换界面效果)
+* coordinatorlayout的使用
 
 

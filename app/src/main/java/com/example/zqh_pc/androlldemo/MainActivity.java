@@ -15,7 +15,7 @@ import android.view.View;
 
 import com.example.zqh_pc.androlldemo.Activity.DrawableTitingActivity;
 import com.example.zqh_pc.androlldemo.Activity.MyToolBarActivity;
-import com.example.zqh_pc.androlldemo.Activity.WidgetActivity;
+import com.example.zqh_pc.androlldemo.Activity.AndroidWidgetActivity;
 import com.example.zqh_pc.androlldemo.Adapter.MyAdapter;
 
 import java.util.ArrayList;
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(MainActivity.this, DrawableTitingActivity.class);
                         break;
                     case 5:
-                        intent = new Intent(MainActivity.this, WidgetActivity.class);
+                        intent = new Intent(MainActivity.this, AndroidWidgetActivity.class);
                         break;
                 }
 

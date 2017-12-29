@@ -30,7 +30,7 @@ import java.util.List;
  * 一些其他控件的界面
  */
 
-public class WidgetActivity extends FragmentActivity implements View.OnClickListener {
+public class CoordinatorLayoutToolbarScroolActivity extends FragmentActivity implements View.OnClickListener {
     //    private TextInputLayout mTextInputLayout;// 新的编辑框父布局
     private FloatingActionButton mFloatingActionButton;//浮动按钮
     private TabLayout mTabLayout;
@@ -59,7 +59,7 @@ public class WidgetActivity extends FragmentActivity implements View.OnClickList
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
 
-        setContentView(R.layout.activity_widget);
+        setContentView(R.layout.activity_coordinator_scroll);
         initView();
     }
 
@@ -136,14 +136,14 @@ public class WidgetActivity extends FragmentActivity implements View.OnClickList
             mToolbar.setElevation(0f);
         }
         //logo图标(没有点击事件)
-        mToolbar.setLogo(R.mipmap.ic_head);
+        mToolbar.setLogo(R.mipmap.ic_launcher);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fab1:
-                Intent intent = new Intent(WidgetActivity.this, CoordinatorLayoutActivity.class);
+                Intent intent = new Intent(CoordinatorLayoutToolbarScroolActivity.this, CoordinatorLayoutToolbarUnScrollActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.zqh_pc.androlldemo.Activity.WidgetActivity;
+import com.example.zqh_pc.androlldemo.Activity.CoordinatorLayoutToolbarScroolActivity;
 import com.example.zqh_pc.androlldemo.R;
 
 import java.util.ArrayList;
@@ -59,7 +59,7 @@ public class TabFragment2 extends Fragment {
         ReayclerViewAdapter reayclerViewAdapter = new ReayclerViewAdapter(strings);
         my_recyclerly.setAdapter(reayclerViewAdapter);
 //        mycoordinatorly = ((WidgetActivity) getActivity()).getMycoordinatorly();
-        appBarLayout = ((WidgetActivity) getActivity()).getAppBarLayout();
+        appBarLayout = ((CoordinatorLayoutToolbarScroolActivity) getActivity()).getAppBarLayout();
         my_recyclerly.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -86,10 +86,10 @@ public class TabFragment2 extends Fragment {
                         c_y=Math.abs(consumed1[1]);
                         if (f_y > c_y) {//上
                             appBarLayout.setExpanded(true);
-                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.VISIBLE);
+                            ((CoordinatorLayoutToolbarScroolActivity) getActivity()).mToolbar.setVisibility(View.VISIBLE);
                         } else if (f_y < c_y) {// 下
                             appBarLayout.setExpanded(false);
-                            ((WidgetActivity) getActivity()).mToolbar.setVisibility(View.INVISIBLE);
+                            ((CoordinatorLayoutToolbarScroolActivity) getActivity()).mToolbar.setVisibility(View.INVISIBLE);
                         }
                         break;
                 }

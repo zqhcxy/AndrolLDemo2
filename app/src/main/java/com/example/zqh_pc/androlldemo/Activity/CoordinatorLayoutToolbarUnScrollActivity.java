@@ -21,7 +21,7 @@ import java.util.List;
  *
  *
  */
-public class CoordinatorLayoutActivity extends Activity {
+public class CoordinatorLayoutToolbarUnScrollActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class CoordinatorLayoutActivity extends Activity {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            TextView textView = new TextView(CoordinatorLayoutActivity.this);
+            TextView textView = new TextView(CoordinatorLayoutToolbarUnScrollActivity.this);
             parent.addView(textView);
             ViewHolder viewHolder = new ViewHolder(textView);
             return viewHolder;

@@ -55,7 +55,7 @@ public class MyToolBarActivity extends AppCompatActivity {
             }
         });
         //logo图标(没有点击事件)
-        my_toolbar.setLogo(R.mipmap.ic_head);
+        my_toolbar.setLogo(R.mipmap.ic_launcher);
     }
 
     @Override

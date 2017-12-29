@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.example.zqh_pc.androlldemo"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.zqh_pc.androlldemo">
 
     <application
         android:allowBackup="true"
@@ -57,9 +57,11 @@
             android:name=".Activity.DrawableTitingActivity"
             android:label="@string/title_activity_drawable_titing">
         </activity>
-        <activity android:name=".Activity.WidgetActivity">
+        <activity android:name=".Activity.CoordinatorLayoutToolbarScroolActivity">
         </activity>
-        <activity android:name=".Activity.CoordinatorLayoutActivity">
+        <activity android:name=".Activity.CoordinatorLayoutToolbarUnScrollActivity">
+        </activity>
+        <activity android:name=".Activity.AndroidWidgetActivity">
         </activity>
     </application>
 
